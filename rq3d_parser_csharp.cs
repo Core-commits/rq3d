@@ -17,13 +17,13 @@ void model(string fileloc){
 		  
   
    	 string[] lines = System.IO.File.ReadAllLines(fileloc); //we load file
-   	  string[] modelcontainer ={"" };
-   	  string contents = String.Concat(System.IO.File.ReadAllLines(fileloc)); //seperating arrays
-          string line = "e";
-          line = contents;
-             char[] remv = new char[] {' ', '\t'};
+   	 string[] modelcontainer ={""}; //its empty beacuse without that it throws exception
+   	 string contents = String.Concat(System.IO.File.ReadAllLines(fileloc)); //seperating arrays
+         string line = "e";//it should not empty for not throwing exceptions
+         line = contents;
+         char[] remv = new char[] {' ', '\t'};
   
-           ohherewego = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff
+         ohherewego = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff
          
            
         int contents2 = contents.Split(' ').Length/*;*/;
@@ -60,5 +60,5 @@ void model(string fileloc){
   		if (ohherewego[i].Contains("end")){
              		GL.End();		
              	}
-         	}
+             }
 }
