@@ -16,19 +16,19 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 void model(string fileloc){
 		  
   
-   	 string[] lines = System.IO.File.ReadAllLines(fileloc); //we load file
-   	 string[] modelcontainer ={""}; //its empty beacuse without that it throws exception
+   	 string[] lines = System.IO.File.ReadAllLines(fileloc);   //we load file
+   	 string[] modelcontainer ={""};   //its empty beacuse without that it throws exception
    	 string contents = String.Concat(System.IO.File.ReadAllLines(fileloc)); //seperating arrays
-         string line = "e";//it should not empty for not throwing exceptions
-         line = contents;// setting contents into line to convert them to arrays and make it better 
+         string line = "e";   //it should not empty for not throwing exceptions
+         line = contents;    // setting contents into line to convert them to arrays and make it better 
          char[] remv = new char[] {' ', '\t'};
   
          modelcontainer = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff,converting array stuff...
          
-           
-         int contents2 = contents.Split(' ').Length;
+         
+         int contents2 = contents.Split(' ').Length; // find its length to not crash
 
-             for (int i = 0; i <  contents2; i++)
+             for (int i = 0; i <  contents2; i++) //for reading all array
                 {
              	 if (modelcontainer[i].Contains("begin_tri")){
              		GL.Begin(BeginMode.Triangles);
