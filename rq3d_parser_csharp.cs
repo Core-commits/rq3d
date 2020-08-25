@@ -20,15 +20,15 @@ void model(string fileloc){
    	 string[] modelcontainer ={""}; //its empty beacuse without that it throws exception
    	 string contents = String.Concat(System.IO.File.ReadAllLines(fileloc)); //seperating arrays
          string line = "e";//it should not empty for not throwing exceptions
-         line = contents;
+         line = contents;// setting contents into line to convert them to arrays and make it better 
          char[] remv = new char[] {' ', '\t'};
   
-         ohherewego = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff
+         ohherewego = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff,converting array stuff...
          
            
-        int contents2 = contents.Split(' ').Length/*;*/;
+        int contents2 = contents.Split(' ').Length;
 
-             for (int i = 0; i <  contents2;  /*18*/ /*;*/ i++)
+             for (int i = 0; i <  contents2; i++)
                 {
              	 if (modelcontainer[i].Contains("begin_tri")){
              		GL.Begin(BeginMode.Triangles);
