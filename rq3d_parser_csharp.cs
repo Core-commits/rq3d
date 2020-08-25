@@ -23,10 +23,10 @@ void model(string fileloc){
          line = contents;// setting contents into line to convert them to arrays and make it better 
          char[] remv = new char[] {' ', '\t'};
   
-         ohherewego = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff,converting array stuff...
+         modelcontainer = line.Split(remv, StringSplitOptions.RemoveEmptyEntries); //removing unneccesary stuff,converting array stuff...
          
            
-        int contents2 = contents.Split(' ').Length;
+         int contents2 = contents.Split(' ').Length;
 
              for (int i = 0; i <  contents2; i++)
                 {
@@ -57,7 +57,7 @@ void model(string fileloc){
    		}  
    
              
-  		if (ohherewego[i].Contains("end")){
+  		if (modelcontainer[i].Contains("end")){
              		GL.End();		
              	}
              }
